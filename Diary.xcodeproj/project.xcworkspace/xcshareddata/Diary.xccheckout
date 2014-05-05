@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F1468B70-13B4-4306-88BE-C6681136E72A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Diary</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>314E5834-611B-42AF-A383-D269159C49CE</key>
+		<string>ssh://github.com/CisSovereign/ItemList.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Diary.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>314E5834-611B-42AF-A383-D269159C49CE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/CisSovereign/ItemList.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>314E5834-611B-42AF-A383-D269159C49CE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>314E5834-611B-42AF-A383-D269159C49CE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Diary</string>
+		</dict>
+	</array>
+</dict>
+</plist>

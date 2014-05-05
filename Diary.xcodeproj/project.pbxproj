@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7BA0ABAC1918470B00F165C0 /* DACoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA0ABAB1918470B00F165C0 /* DACoreDataStack.m */; };
 		7BD00FF5191840AE00C94F5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD00FF4191840AE00C94F5F /* Foundation.framework */; };
 		7BD00FF7191840AE00C94F5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD00FF6191840AE00C94F5F /* CoreGraphics.framework */; };
 		7BD00FF9191840AE00C94F5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD00FF8191840AE00C94F5F /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7BA0ABAA1918470B00F165C0 /* DACoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DACoreDataStack.h; sourceTree = "<group>"; };
+		7BA0ABAB1918470B00F165C0 /* DACoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACoreDataStack.m; sourceTree = "<group>"; };
 		7BD00FF1191840AE00C94F5F /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD00FF4191840AE00C94F5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BD00FF6191840AE00C94F5F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,6 +120,8 @@
 			children = (
 				7BD01005191840AE00C94F5F /* DAAppDelegate.h */,
 				7BD01006191840AE00C94F5F /* DAAppDelegate.m */,
+				7BA0ABAA1918470B00F165C0 /* DACoreDataStack.h */,
+				7BA0ABAB1918470B00F165C0 /* DACoreDataStack.m */,
 				7BD0100B191840AE00C94F5F /* Images.xcassets */,
 				7BD01008191840AE00C94F5F /* Diary.xcdatamodeld */,
 				7BD00FFD191840AE00C94F5F /* Supporting Files */,
@@ -251,6 +256,7 @@
 			files = (
 				7BD0100A191840AE00C94F5F /* Diary.xcdatamodeld in Sources */,
 				7BD01003191840AE00C94F5F /* main.m in Sources */,
+				7BA0ABAC1918470B00F165C0 /* DACoreDataStack.m in Sources */,
 				7BD01007191840AE00C94F5F /* DAAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,6 +454,7 @@
 				7BD01025191840AE00C94F5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7BD01026191840AE00C94F5F /* Build configuration list for PBXNativeTarget "DiaryTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +463,7 @@
 				7BD01028191840AE00C94F5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
