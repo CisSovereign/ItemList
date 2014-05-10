@@ -9,6 +9,7 @@
 #import "DAEntryListViewController.h"
 #import "DACoreDataStack.h"
 #import "DADiaryEntry.h"
+#import "DAEntryViewController.h"
 
 @interface DAEntryListViewController () <NSFetchedResultsControllerDelegate>
 
@@ -39,6 +40,17 @@
     
     [self.fetchedResultsController performFetch:nil];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"edit"]) {
+        UITableViewCell *cell = sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        UINavigationController *navigationController = segue.destinationViewController;
+        DAEntryViewController *entryViewController = (DAEntryViewController *)navigationController.topViewController;
+        entryViewController.entry = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    }
+}
+
 
 - (void)didReceiveMemoryWarning
 {

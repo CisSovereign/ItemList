@@ -6,17 +6,17 @@
 //  Copyright (c) 2014 Collin Hartigan. All rights reserved.
 //
 
-#import "DANewEntryViewController.h"
+#import "DAEntryViewController.h"
 #import "DADiaryEntry.h"
 #import "DACoreDataStack.h"
 
-@interface DANewEntryViewController ()
+@interface DAEntryViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @end
 
-@implementation DANewEntryViewController
+@implementation DAEntryViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +31,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    if (self.entry != nil) {
+        self.textField.text = self.entry.body;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,8 +66,19 @@
     
 }
 
+-(void)updateDiaryEntry {
+    self.entry.body = self.textField.text;
+    
+    DACoreDataStack *coreDataStack = [DACoreDataStack defaultStack];
+    [coreDataStack saveContext];
+}
+
 - (IBAction)doneWasPressed:(id)sender {
-    [self insertDiaryEntry];
+    if (self.entry != nil) {
+        [self updateDiaryEntry];
+    } else {
+            [self insertDiaryEntry];
+    }
     [self dismissSelf];
     
 }

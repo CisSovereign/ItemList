@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DANewEntryViewController : UIViewController
+@class DADiaryEntry;
+
+@interface DAEntryViewController : UIViewController
+
+@property (nonatomic, strong) DADiaryEntry *entry;
 
 @end
