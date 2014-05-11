@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Entry List View Controller - Root View Controller-->
+        <!--Entry List View Controller - Diary Entry-->
         <scene sceneID="bfd-Kg-Gpi">
             <objects>
                 <tableViewController id="raq-NZ-gH2" customClass="DAEntryListViewController" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="raq-NZ-gH2" id="dvy-TM-2DM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="oNN-et-M74">
+                    <navigationItem key="navigationItem" title="Diary Entry" id="oNN-et-M74">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VV2-SF-wp3">
                             <connections>
                                 <segue destination="m0l-jw-Uq3" kind="modal" id="oUU-hN-QPa"/>
@@ -86,7 +86,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Gc4-yc-QHm">
             <objects>
-                <navigationController definesPresentationContext="YES" id="Xpf-1W-LgU" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="Xpf-1W-LgU" customClass="DANavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hCw-fA-2FX">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -101,7 +101,7 @@
         <!--Navigation Controller-->
         <scene sceneID="rK0-5H-BRw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m0l-jw-Uq3" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m0l-jw-Uq3" customClass="DANavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JUW-di-PeW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

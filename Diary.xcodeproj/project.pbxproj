@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B4746F7191EF48300AC9731 /* DANavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4746F6191EF48300AC9731 /* DANavigationController.m */; };
 		7BA0ABAC1918470B00F165C0 /* DACoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA0ABAB1918470B00F165C0 /* DACoreDataStack.m */; };
 		7BA0ABAF19184C9600F165C0 /* DADiaryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA0ABAE19184C9600F165C0 /* DADiaryEntry.m */; };
 		7BA1BE14191A143300583CC1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BA1BE13191A143300583CC1 /* MainStoryboard.storyboard */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B4746F5191EF48300AC9731 /* DANavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DANavigationController.h; sourceTree = "<group>"; };
+		7B4746F6191EF48300AC9731 /* DANavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DANavigationController.m; sourceTree = "<group>"; };
 		7BA0ABAA1918470B00F165C0 /* DACoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DACoreDataStack.h; sourceTree = "<group>"; };
 		7BA0ABAB1918470B00F165C0 /* DACoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACoreDataStack.m; sourceTree = "<group>"; };
 		7BA0ABAD19184C9600F165C0 /* DADiaryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DADiaryEntry.h; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				7BC2F303191B55C1001DA7CD /* DAEntryListViewController.m */,
 				7BD01005191840AE00C94F5F /* DAAppDelegate.h */,
 				7BD01006191840AE00C94F5F /* DAAppDelegate.m */,
+				7B4746F5191EF48300AC9731 /* DANavigationController.h */,
+				7B4746F6191EF48300AC9731 /* DANavigationController.m */,
 				7BA0ABAA1918470B00F165C0 /* DACoreDataStack.h */,
 				7BA0ABAB1918470B00F165C0 /* DACoreDataStack.m */,
 				7BD0100B191840AE00C94F5F /* Images.xcassets */,
@@ -277,6 +282,7 @@
 				7BD01003191840AE00C94F5F /* main.m in Sources */,
 				7BA0ABAF19184C9600F165C0 /* DADiaryEntry.m in Sources */,
 				7BA1BE17191A155E00583CC1 /* DAEntryViewController.m in Sources */,
+				7B4746F7191EF48300AC9731 /* DANavigationController.m in Sources */,
 				7BA0ABAC1918470B00F165C0 /* DACoreDataStack.m in Sources */,
 				7BD01007191840AE00C94F5F /* DAAppDelegate.m in Sources */,
 				7BC2F304191B55C1001DA7CD /* DAEntryListViewController.m in Sources */,
