@@ -10,6 +10,7 @@
 #import "DACoreDataStack.h"
 #import "DADiaryEntry.h"
 #import "DAEntryViewController.h"
+#import "DAEntryCell.h"
 
 @interface DAEntryListViewController () <NSFetchedResultsControllerDelegate>
 
@@ -86,12 +87,19 @@
     
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    DAEntryCell *entry = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    return [DAEntryCell heightForEntry:entry];
+}
+
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
     
     return [sectionInfo name];
 }
+
+
 
 - (NSFetchRequest *)entryListFetchRequest {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"DADiaryEntry"];

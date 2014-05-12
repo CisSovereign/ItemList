@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B4746F7191EF48300AC9731 /* DANavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4746F6191EF48300AC9731 /* DANavigationController.m */; };
+		7B5C2F081920807D00DACF43 /* DAEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C2F071920807D00DACF43 /* DAEntryCell.m */; };
 		7BA0ABAC1918470B00F165C0 /* DACoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA0ABAB1918470B00F165C0 /* DACoreDataStack.m */; };
 		7BA0ABAF19184C9600F165C0 /* DADiaryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA0ABAE19184C9600F165C0 /* DADiaryEntry.m */; };
 		7BA1BE14191A143300583CC1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BA1BE13191A143300583CC1 /* MainStoryboard.storyboard */; };
@@ -43,6 +44,8 @@
 /* Begin PBXFileReference section */
 		7B4746F5191EF48300AC9731 /* DANavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DANavigationController.h; sourceTree = "<group>"; };
 		7B4746F6191EF48300AC9731 /* DANavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DANavigationController.m; sourceTree = "<group>"; };
+		7B5C2F061920807D00DACF43 /* DAEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAEntryCell.h; sourceTree = "<group>"; };
+		7B5C2F071920807D00DACF43 /* DAEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAEntryCell.m; sourceTree = "<group>"; };
 		7BA0ABAA1918470B00F165C0 /* DACoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DACoreDataStack.h; sourceTree = "<group>"; };
 		7BA0ABAB1918470B00F165C0 /* DACoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACoreDataStack.m; sourceTree = "<group>"; };
 		7BA0ABAD19184C9600F165C0 /* DADiaryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DADiaryEntry.h; sourceTree = "<group>"; };
@@ -140,6 +143,8 @@
 				7B4746F6191EF48300AC9731 /* DANavigationController.m */,
 				7BA0ABAA1918470B00F165C0 /* DACoreDataStack.h */,
 				7BA0ABAB1918470B00F165C0 /* DACoreDataStack.m */,
+				7B5C2F061920807D00DACF43 /* DAEntryCell.h */,
+				7B5C2F071920807D00DACF43 /* DAEntryCell.m */,
 				7BD0100B191840AE00C94F5F /* Images.xcassets */,
 				7BD01008191840AE00C94F5F /* Diary.xcdatamodeld */,
 				7BA1BE13191A143300583CC1 /* MainStoryboard.storyboard */,
@@ -279,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BD0100A191840AE00C94F5F /* Diary.xcdatamodeld in Sources */,
+				7B5C2F081920807D00DACF43 /* DAEntryCell.m in Sources */,
 				7BD01003191840AE00C94F5F /* main.m in Sources */,
 				7BA0ABAF19184C9600F165C0 /* DADiaryEntry.m in Sources */,
 				7BA1BE17191A155E00583CC1 /* DAEntryViewController.m in Sources */,
