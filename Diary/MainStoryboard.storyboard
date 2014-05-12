@@ -52,6 +52,11 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="bodyLabel" destination="Gc7-PO-i2t" id="5Nz-oy-gqb"/>
+                                    <outlet property="dateLabel" destination="61m-9w-A8i" id="SXd-ai-il0"/>
+                                    <outlet property="locationLabel" destination="lnB-rK-lnj" id="Hl3-8t-I05"/>
+                                    <outlet property="mainImageView" destination="dJT-cD-jgc" id="m8K-OC-JrE"/>
+                                    <outlet property="moodImageView" destination="SS9-D8-1sE" id="C50-5U-pih"/>
                                     <segue destination="m0l-jw-Uq3" kind="modal" identifier="edit" id="Wjp-Ku-b7R"/>
                                 </connections>
                             </tableViewCell>
