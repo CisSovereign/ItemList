@@ -14,6 +14,12 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 
+@property (nonatomic, assign) DADiaryEntry *pickedMood;
+
+@property (weak, nonatomic) IBOutlet UIButton *badButton;
+@property (weak, nonatomic) IBOutlet UIButton *averageButton;
+@property (weak, nonatomic) IBOutlet UIButton *goodButton;
+
 @end
 
 @implementation DAEntryViewController
@@ -85,6 +91,17 @@
 
 - (IBAction)cancelWasPressed:(id)sender {
     [self dismissSelf];
+}
+
+- (IBAction)badWasPressed:(id)sender {
+
+    
+}
+- (IBAction)averageWasPressed:(id)sender {
+    
+}
+- (IBAction)goodWasPressed:(id)sender {
+    self.pickedMood = DADiaryEntryMoodGood;
 }
 
 @end
