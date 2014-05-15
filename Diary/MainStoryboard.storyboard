@@ -87,11 +87,18 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="a0J-Yl-usj">
-                                <rect key="frame" x="29" y="79" width="256" height="30"/>
+                                <rect key="frame" x="29" y="123" width="256" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6k1-Pa-ybP">
+                                <rect key="frame" x="29" y="84" width="256" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -108,8 +115,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="accessoryView" destination="3KV-72-asx" id="0E4-Uv-3WZ"/>
                         <outlet property="averageButton" destination="zu8-iQ-5jt" id="U9Y-bH-AvZ"/>
                         <outlet property="badButton" destination="8Yn-Al-H2c" id="bGH-BW-aCh"/>
+                        <outlet property="dateLabel" destination="6k1-Pa-ybP" id="POV-tZ-pPQ"/>
                         <outlet property="goodButton" destination="T2c-kG-Tma" id="g3s-fP-JCQ"/>
                         <outlet property="textField" destination="a0J-Yl-usj" id="0MI-R6-39D"/>
                     </connections>

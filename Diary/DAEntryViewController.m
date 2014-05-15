@@ -14,11 +14,12 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 
-@property (nonatomic, assign) DADiaryEntry *pickedMood;
-
+@property (nonatomic, assign) enum DADiaryEntry *pickedMood;
 @property (weak, nonatomic) IBOutlet UIButton *badButton;
 @property (weak, nonatomic) IBOutlet UIButton *averageButton;
 @property (weak, nonatomic) IBOutlet UIButton *goodButton;
+@property (strong, nonatomic) IBOutlet UIView *accessoryView;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
 @end
 
@@ -38,9 +39,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    NSDate *date;
+    
     if (self.entry != nil) {
         self.textField.text = self.entry.body;
+        self.pickedMood = self.entry.mood;
+        date = [NSDate dateWithTimeIntervalSince1970:self.entry.date];
+    } else {
+        self.pickedMood = DADiaryEntryMoodGood;
+        date = [NSDate date];
     }
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEEE MMMM d, yyyy"];
+    self.dateLabel.text = [dateFormatter stringFromDate:date];
+    
+    self.textField.inputAccessoryView = self. accessoryView;
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,6 +92,27 @@
     [coreDataStack saveContext];
 }
 
+- (void)setPickedMood:(enum DADiaryEntryMood)pickedMood {
+    _pickedMood = pickedMood;
+    
+    self.badButton.alpha = 0.5f;
+    self.goodButton.alpha = 0.5f;
+    self.averageButton.alpha = 0.5;
+    
+    switch (pickedMood) {
+        case DADiaryEntryMoodGood:
+            self.goodButton.alpha = 1.0f;
+            break;
+            
+        case DADiaryEntryMoodAverage:
+            self.averageButton.alpha = 1.0f;
+            break;
+        case DADiaryEntryMoodBad:
+            self.badButton.alpha = 1.0f;
+            break;
+    }
+}
+
 - (IBAction)doneWasPressed:(id)sender {
     if (self.entry != nil) {
         [self updateDiaryEntry];
@@ -94,11 +128,10 @@
 }
 
 - (IBAction)badWasPressed:(id)sender {
-
-    
+    self.pickedMood = DADiaryEntryMoodBad;
 }
 - (IBAction)averageWasPressed:(id)sender {
-    
+    self.pickedMood = DADiaryEntryMoodAverage;
 }
 - (IBAction)goodWasPressed:(id)sender {
     self.pickedMood = DADiaryEntryMoodGood;
