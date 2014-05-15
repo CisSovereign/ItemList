@@ -12,7 +12,8 @@
 
 @interface DAEntryViewController ()
 
-@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+
 
 @property (nonatomic, assign) enum DADiaryEntry *pickedMood;
 @property (weak, nonatomic) IBOutlet UIButton *badButton;
@@ -20,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *goodButton;
 @property (strong, nonatomic) IBOutlet UIView *accessoryView;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UIButton *imageButton;
 
 @end
 
@@ -42,7 +44,7 @@
     NSDate *date;
     
     if (self.entry != nil) {
-        self.textField.text = self.entry.body;
+        self.textView.text = self.entry.body;
         self.pickedMood = self.entry.mood;
         date = [NSDate dateWithTimeIntervalSince1970:self.entry.date];
     } else {
@@ -53,7 +55,14 @@
     [dateFormatter setDateFormat:@"EEEE MMMM d, yyyy"];
     self.dateLabel.text = [dateFormatter stringFromDate:date];
     
-    self.textField.inputAccessoryView = self. accessoryView;
+    self.textView.inputAccessoryView = self. accessoryView;
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.textView becomeFirstResponder];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,14 +88,14 @@
 -(void)insertDiaryEntry {
     DACoreDataStack *coreDataStack = [DACoreDataStack defaultStack];
     DADiaryEntry *entry = [NSEntityDescription insertNewObjectForEntityForName:@"DADiaryEntry" inManagedObjectContext:coreDataStack.managedObjectContext];
-    entry.body = self.textField.text;
+    entry.body = self.textView.text;
     entry.date = [[NSDate date] timeIntervalSince1970];
     [coreDataStack saveContext];
     
 }
 
 -(void)updateDiaryEntry {
-    self.entry.body = self.textField.text;
+    self.entry.body = self.textView.text;
     
     DACoreDataStack *coreDataStack = [DACoreDataStack defaultStack];
     [coreDataStack saveContext];
@@ -136,5 +145,11 @@
 - (IBAction)goodWasPressed:(id)sender {
     self.pickedMood = DADiaryEntryMoodGood;
 }
+
+- (IBAction)imageButtonWasPressed:(id)sender {
+    
+    
+}
+
 
 @end

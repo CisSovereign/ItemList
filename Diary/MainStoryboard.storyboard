@@ -86,19 +86,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="a0J-Yl-usj">
-                                <rect key="frame" x="29" y="123" width="256" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6k1-Pa-ybP">
-                                <rect key="frame" x="29" y="84" width="256" height="21"/>
+                                <rect key="frame" x="101" y="84" width="184" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="U1I-MJ-5Uc">
+                                <rect key="frame" x="20" y="113" width="285" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WF0-oq-VpT">
+                                <rect key="frame" x="10" y="84" width="71" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="icn_noimage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="imageButtonWasPressed:" destination="q5t-zZ-E9W" eventType="touchUpInside" id="MpG-mY-tRB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -120,7 +131,8 @@
                         <outlet property="badButton" destination="8Yn-Al-H2c" id="bGH-BW-aCh"/>
                         <outlet property="dateLabel" destination="6k1-Pa-ybP" id="POV-tZ-pPQ"/>
                         <outlet property="goodButton" destination="T2c-kG-Tma" id="g3s-fP-JCQ"/>
-                        <outlet property="textField" destination="a0J-Yl-usj" id="0MI-R6-39D"/>
+                        <outlet property="imageButton" destination="WF0-oq-VpT" id="fby-Mm-wXz"/>
+                        <outlet property="textView" destination="U1I-MJ-5Uc" id="1v5-2B-ZZ7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWw-yR-f22" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -204,6 +216,9 @@
             <point key="canvasLocation" x="383" y="-697"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icn_noimage" width="16" height="16"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
